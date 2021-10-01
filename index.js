@@ -6,4 +6,4 @@ class Employee {
     }
 }
 
-export default
+module.export = 
