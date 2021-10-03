@@ -1,5 +1,8 @@
-import Employee from ("..index");
+const Employee = require("../lib/Employee");
 
-let theEmployee = new Employee ("kai", 123, "kai1@mymail.com");
+test("create an employee", () => {
+    const myEmployee = new Employee ("kai", 123, "kai1@mymail.com");
 
-expect (theEmployee.name).toEqual("kai");
+    expect (myEmployee.name).toEqual("kai");
+    
+});
