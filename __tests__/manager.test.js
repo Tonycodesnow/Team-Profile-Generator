@@ -1,8 +1,25 @@
-const  Manager = require("../lib/Manager");
+const Manager = require("../lib/Manager");
 
-test("create an manager", () => {
-    const myManager = new Manager ("Sam", 123, "Sam1@mymail.com");
+describe("create a manager", () => {
+  const myManager = new Manager("Sam", 123, "Sam1@mymail.com", 1);
 
-    expect (myManager.name).toEqual("Sam");
+  test("check name", () => {
+    expect(myManager.getName()).toEqual("Sam");
+  });
 
+  test("check Id", () => {
+    expect(myManager.getId()).toEqual(123);
+  });
+
+  test("check Email", () => {
+    expect(myManager.getEmail()).toEqual("Sam1@mymail.com");
+  });
+
+  test("check OfficeNumber", () => {
+    expect(myManager.getOfficeNumber()).toEqual(1);
+  });
+
+  test("check Role", () => {
+    expect(myManager.getRole()).toEqual("Manager");
+  });
 });
