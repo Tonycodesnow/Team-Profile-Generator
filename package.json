@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Tonycodesnow/Team-Pro-Gen/issues"
   },
-  "homepage": "https://github.com/Tonycodesnow/Team-Pro-Gen#readme"
+  "homepage": "https://github.com/Tonycodesnow/Team-Pro-Gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
