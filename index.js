@@ -46,7 +46,7 @@ function newTeamMember() {
         {
         type: "list",
         name: "choice",
-        message: "What do you wnat to add next?",
+        message: "Who do you want to add next?",
         choices: ['Intern', 'Engineer', 'Quit'],
         }
     ])
@@ -62,5 +62,44 @@ function newTeamMember() {
     })
 }
 
+function addEngineer() {
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "github",
+      message: "What is the Engineer's GitHub?"
+    }
+  ])
+  .then(({choice}) => {
+    console.log(choice);
+    if (choice === 'Intern') {
+        addIntern()
+    } else if (choice === 'Manager') {
+        addManager()
+    } else {
+        quit()
+    }
+})
+}
+
+function addIntern() {
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "school",
+      message: "What is the Intern's school?"
+    }
+  ])
+  .then(({choice}) => {
+    console.log(choice);
+    if (choice === 'Engineer') {
+      addEngineer()
+    } else if (choice === 'Manager') {
+        addManager()
+    } else {
+        quit()
+    }
+})
+}
 
 addManager()
