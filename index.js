@@ -1,12 +1,17 @@
 const { writeFile, copyFile } = require("./utils/generate-site");
-const generatePage = require("./src/page-template");
 const inquirer = require("inquirer");
 const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+
 const team = [];
+
+const generateHtml = (team) => {
+    writeFile(team)
+    // console.log("checking weather its called")
+}
 
 function addManager() {
   inquirer
@@ -59,7 +64,7 @@ function newTeamMember() {
       } else if (choice === "Engineer") {
         addEngineer();
       } else {
-        quit();
+       generateHtml()
       }
     });
 }
@@ -69,10 +74,25 @@ function addEngineer() {
     .prompt([
       {
         type: "input",
+        name: "name",
+        message: "What is  the Engineer's Name?",
+      },
+      {
+        type: "input",
+        name: "Id",
+        message: "What is  the  Engineer's Id?",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "What is  the  Engineer's Email?",
+      },
+      {
+        type: "input",
         name: "github",
         message: "Enter the Engineer's GitHub Username (Required)?",
-        validate: nameInput => {
-          if (nameInput) {
+        validate: github => {
+          if (github) {
             return true;
           } else {
             console.log('Please enter your GitHub username!');
@@ -81,15 +101,13 @@ function addEngineer() {
         }
       },
     ])
-    .then(({ choice }) => {
-      console.log(choice);
-      if (choice === "Intern") {
-        addIntern();
-      } else if (choice === "Manager") {
-        addManager();
-      } else {
-        quit();
-      }
+    .then(({ name, Id, email, github }) => {
+      const myEngineer = new Manager(name, Id, email, github);
+      team.push(myEngineer);
+      newTeamMember();
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 
@@ -98,20 +116,36 @@ function addIntern() {
     .prompt([
       {
         type: "input",
+        name: "name",
+        message: "What is  the Intern's Name?",
+      },
+      {
+        type: "input",
+        name: "Id",
+        message: "What is  the  Intern's Id?",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "What is  the  Intern's Email?",
+      },
+      {
+        type: "input",
         name: "school",
         message: "What is the Intern's school?",
       },
     ])
-    .then(({ choice }) => {
-      console.log(choice);
-      if (choice === "Engineer") {
-        addEngineer();
-      } else if (choice === "Manager") {
-        addManager();
-      } else {
-        quit();
-      }
+    .then(({ name, Id, email, school }) => {
+      const myintern = new Manager(name, Id, email, school);
+      team.push(myintern);
+      newTeamMember();
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 
+// create html
+
 addManager();
+// fs.writeFile(team);
