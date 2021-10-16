@@ -3,10 +3,10 @@ const { url } = require("inspector");
 const { resolve } = require("path");
 const generatePage = require("../src/page-template");
 
-const writeFile = () => {
+const writeFile = (team) => {
   fs.writeFileSync(
     "./dist/index.html",
-    generatePage(),
+    generatePage(team),
     "utf8"
   );
 };

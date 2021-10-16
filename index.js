@@ -8,7 +8,8 @@ const Intern = require("./lib/Intern");
 
 const team = [];
 
-const generateHtml = (team) => {
+const generateHtml = () => {
+  console.log(team)
     writeFile(team)
     // console.log("checking weather its called")
 }
@@ -67,6 +68,7 @@ function newTeamMember() {
        generateHtml()
       }
     });
+    console.log(team)
 }
 
 function addEngineer() {
@@ -102,7 +104,7 @@ function addEngineer() {
       },
     ])
     .then(({ name, Id, email, github }) => {
-      const myEngineer = new Manager(name, Id, email, github);
+      const myEngineer = new Engineer(name, Id, email, github);
       team.push(myEngineer);
       newTeamMember();
     })
@@ -136,7 +138,7 @@ function addIntern() {
       },
     ])
     .then(({ name, Id, email, school }) => {
-      const myintern = new Manager(name, Id, email, school);
+      const myintern = new Intern(name, Id, email, school);
       team.push(myintern);
       newTeamMember();
     })
