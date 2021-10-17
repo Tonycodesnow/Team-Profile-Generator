@@ -1,8 +1,33 @@
-
+const generateExtra  = (employ) => {
+if(employ.getRole() === "Manager") {
+  return `Officenumber: ${employ.getOfficeNumber()}`
+} else if (employ.getRole() === "Intern"){
+  return `School: ${employ.getSchool()}`
+} else {
+  return `GitHub: ${employ.getGitHub()}`
+}
+}
 
 module.exports = generatePage = (team) => {
      // destructure page data by section
-
+     console.log(team)
+     let cardlist = ''
+     team.forEach(employ => {
+       let card = `<div class="col-sm-4">
+       <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+       <div class="card-header">Name: ${employ.getName()}</div>
+         <div class="card-header">Role: ${employ.getRole()}</div>
+         <div class="card-body">
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item">Id: ${employ.getId()}</li>
+           <li class="list-group-item">Email: ${employ.getEmail()}</li>
+           <li class="list-group-item">${generateExtra(employ)}</li>
+         </ul>
+         </div>
+       </div>
+       </div>`
+       cardlist = cardlist + card
+     })
 
     return `
     <!DOCTYPE html>
@@ -18,66 +43,21 @@ module.exports = generatePage = (team) => {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
-
-    <header id="top">
+  <body>
+  <header id="top">
 	<div class="navbar navbar-dark bg-dark shadow-sm">
-		<div class="container">
-			<a href="#" class="navbar-brand d-flex align-items-center">
-				<strong>My Team</strong>
-			</a>
-		</div>
-	</div>
-</header>
-<div class="row">
-<div class="col-sm-4">
-<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">#1 Card Header<br>☕manager</div>
-  <div class="card-body">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-</div>
+  <div class="container">
+  <a href="#" class="navbar-brand d-flex">
+  <strong>My Pro Team Generator</strong>
+  </a>
   </div>
-    </div>
-    <div class="col-sm-4">
-    <div class="card text-white bg-light mb-3" style="max-width: 18rem;">
-      <div class="card-header">#2 Card Header<br>💼 Employee</div>
-      <div class="card-body">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      </div>
-    </div>
-      </div>
-      <div class="col-sm-4">
-    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-      <div class="card-header">#3 Card Header<br>🛠️ Engineer</div>
-      <div class="card-body">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      </div>
-    </div>
-    </div>
-    <div class="col-sm-4">
-    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-      <div class="card-header">#4 Card Header<br>🎓️ Intern</div>
-      <div class="card-body">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      </div>
-    </div>
-    </div>
-      </div>  
-    
+	</div>
+  </header>
+  <div class="row">
+  ${cardlist}
+  </div>  
+  </body>
+  </html>
     `;
   };
+
