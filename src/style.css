@@ -3,11 +3,13 @@
 }
 
 .card-header {
-    background-color: #0F52BA;
+    background-color: #0F52BA !important;
     color: white;
 }
 
-
+.navbar {
+    text-align: center;
+}
 
 .list-group {
     border: 1px solid grey;

@@ -47,8 +47,8 @@ module.exports = generatePage = (team) => {
   <header id="top">
 	<div class="navbar navbar-dark bg-dark shadow-sm">
   <div class="container">
-  <a href="#" class="navbar-brand d-flex align-items-center">
-  <strong>My Team</strong>
+  <a href="#" class="navbar-brand d-flex">
+  <strong>My Pro Team Generator</strong>
   </a>
   </div>
 	</div>
