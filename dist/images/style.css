@@ -2,6 +2,18 @@
     padding-bottom: 50px;
 }
 
+.barcolor {
+    background-color: blueviolet !important;
+}
+
+.card-hue {
+    background-color: #1e5ab5 !important;
+    color: white;
+}
+
+.navbar {
+    text-align: center;
+}
 
 .list-group {
     border: 1px solid grey;

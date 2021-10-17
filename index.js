@@ -9,7 +9,6 @@ const Intern = require("./lib/Intern");
 const team = [];
 
 const generateHtml = () => {
-  console.log(team)
     writeFile(team)
     // console.log("checking weather its called")
 }
@@ -83,7 +82,6 @@ function newTeamMember() {
       },
     ])
     .then(({ choice }) => {
-      console.log(choice);
       if (choice === "Intern") {
         addIntern();
       } else if (choice === "Engineer") {
@@ -92,7 +90,6 @@ function newTeamMember() {
        generateHtml()
       }
     });
-    console.log(team)
 }
 
 function addEngineer() {
