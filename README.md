@@ -56,27 +56,25 @@ Once the application runs, it will generate an index.html file in the "dist" fol
 
 What the tests passing looks like:
 
-<p align="center"><img src="./dist/images/alltests.png" width="45%"></p>  <br /> 
+<p align="center"><img src="./dist/images/alltests.png" width="40%"></p>  <br /> 
 
 What the command line interface looks like:
 
-<p align="center"><img src="./dist/images/screenshot.png" width="40%"></p> <br /> 
+<p align="center"><img src="./dist/images/screenshot.png" width="35%"></p> <br /> 
 
 What the index.html file looks like once complete:
 
-<p align="center"><img src="./dist/images/livesite.png" width="50%"></p> <br /> 
-
+<p align="center"><img src="./dist/images/livesite.png" width="45%"></p> <br /> 
 
 ## Demos
 
 Click the image below for a video demonstration of the application and the generated index.html file at the end:
 
-[![Team Profile Generator Demo](./assets/images/demoscreenshot.jpg?raw=true)](https://youtu.be/ItXS4mn2ufc)
 
 
 Click the image below for a video demonstration of the tests passing:
 
-[![Team Profile Test Passing Demo](./assets/images/demoyoutube.jpg?raw=true)](https://youtu.be/crwdQJ7V-A4)
+
 
 ## Deployed application link
 
