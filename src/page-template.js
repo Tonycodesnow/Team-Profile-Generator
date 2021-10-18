@@ -20,7 +20,7 @@ module.exports = generatePage = (team) => {
          <div class="card-body">
          <ul class="list-group list-group-flush">
            <li class="list-group-item"><span class="material-icons">face</span> Id: ${employ.getId()}</li>
-           <li class="list-group-item"><span class="material-icons">email</span> Email: ${employ.getEmail()}</li>
+           <a href="mailto:${employ.getEmail()}" class="list-group-item"><span class="material-icons">email</span> Email: ${employ.getEmail()}</a>
            <li class="list-group-item"><span class="material-icons">contacts</span> ${generateExtra(employ)}</li>
          </ul>
          </div>
