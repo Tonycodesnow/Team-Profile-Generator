@@ -56,25 +56,25 @@ Once the application runs, it will generate an index.html file in the "dist" fol
 
 What the tests passing looks like:
 
-<p align="center"><img src="./dist/images/alltests.png" width="40%"></p>  <br /> 
+<p align="center"><img src="./dist/media/alltests.png" width="40%"></p>  <br /> 
 
 What the command line interface looks like:
 
-<p align="center"><img src="./dist/images/screenshot.png" width="35%"></p> <br /> 
+<p align="center"><img src="./dist/media/screenshot.png" width="35%"></p> <br /> 
 
 What the index.html file looks like once complete:
 
-<p align="center"><img src="./dist/images/livesite.png" width="45%"></p> <br /> 
+<p align="center"><img src="./dist/media/livesite.png" width="45%"></p> <br /> 
 
 ## Demos
 
-Click the image below for a video demonstration of the application and the generated index.html file at the end:
+Click on the link below for a video demonstration of the application and the generated index.html file at the end:
 
+https://www.youtube.com/watch?v=2_dT2A-LKOg
 
+Click on the link below for a video demonstration of the tests passing:
 
-Click the image below for a video demonstration of the tests passing:
-
-
+https://youtu.be/2AAz_gekMRY
 
 ## Deployed application link
 
@@ -82,7 +82,7 @@ https://github.com/Tonycodesnow/Team-Pro-Gen  <br />
 
 ## Languages
 
-JavaScript, Bootstrap, Google Fonts, Material Icons, HTML, Node, Inquirer, Jest <br />
+JavaScript, Bootstrap, Google Fonts, Material Icons, HTML, CSS, Node, Inquirer, Jest <br />
 
 
 ## License
