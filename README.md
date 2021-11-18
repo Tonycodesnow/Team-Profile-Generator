@@ -1,5 +1,4 @@
-# Team Pro Gen 
-## Object Oriented Programming Challenge: Team Profile Generator
+## Team Profile Generator
 
 <br />
 
@@ -87,16 +86,16 @@ JavaScript, Bootstrap, Google Fonts, Material Icons, HTML, CSS, Node, Inquirer, 
 
 ## License
 
-  This project is licensed under the MIT license. <br />
+This project is licensed under the MIT license. <br />
   
 ## Tests
 
 To run the tests for this application, enter the following command from the root directory:
 
-  ```
-  npm run test
-  ```
-  <br />
+```
+npm run test
+```
+<br />
 
 ## Questions?
 
